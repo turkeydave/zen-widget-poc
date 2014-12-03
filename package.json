@@ -1,8 +1,8 @@
 {
-  "name": "zenplanner.studio",
+  "name": "zenplanner.widget",
   "private": true,
   "version": "0.0.0",
-  "description": "ZenPlanner Studio SPA",
+  "description": "ZenPlanner Widget POC",
   "repository": "http://www.zenplanner.com",
   "devDependencies": {
     "grunt": "~0.4.5",
@@ -18,9 +18,6 @@
     "grunt-html2js": "~0.2.7",
     "grunt-karma": "~0.8.0",
     "grunt-targethtml": "^0.2.6",
-    "karma": "~0.12.0",
-    "karma-jasmine": "~0.1.0",
-    "karma-ng-html2js-preprocessor": "~0.1.0",
-    "karma-phantomjs-launcher": "~0.1.4"
+    "requirejs": "^2.1.15"
   }
 }

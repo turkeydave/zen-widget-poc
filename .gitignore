@@ -17,13 +17,10 @@ WEB-INF
 *.sublime-workspacezenplanner/studio/skin/node_modules
 
 # front-end
-zenplanner/kiosk/skin/node_modules
-zenplanner/studio/skin/node_modules
-zenplanner/studio/node_modules
-zenplanner/studio/app/bower_components
-zenplanner/studio/app/dist
-zenplanner/studio/app/tmp
-zenplanner/studio/client-libs
+node_modules
+dist
+tmp
+app/client-libs
 
 # local properties overrides
 *.local
