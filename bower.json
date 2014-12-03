@@ -1,0 +1,14 @@
+{
+    "name": "zenplanner.studio",
+    "description": "Studio in SPA",
+    "version": "0.0.0",
+    "homepage": "http://www.zenplanner.com",
+    "private": true,
+    "dependencies": {
+        "angular": "1.3.x",
+        "ui-router": "0.2.x"
+    },
+    "devDependencies": {
+        "angular-mocks": "latest"
+    }
+}

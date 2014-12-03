@@ -1,12 +1,37 @@
-*.class
+# eclipse
+.project
+.settings
 
-# Mobile Tools for Java (J2ME)
-.mtj.tmp/
+# Servlets
+WEB-INF
 
-# Package Files #
-*.jar
-*.war
-*.ear
+# OS X
+.DS_STORE
+.DS_Store
 
-# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
-hs_err_pid*
+# Josh's initrc file?
+.jshintrc
+
+# Sublime text
+*.sublime-project
+*.sublime-workspacezenplanner/studio/skin/node_modules
+
+# front-end
+zenplanner/kiosk/skin/node_modules
+zenplanner/studio/skin/node_modules
+zenplanner/studio/node_modules
+zenplanner/studio/app/bower_components
+zenplanner/studio/app/dist
+zenplanner/studio/app/tmp
+zenplanner/studio/client-libs
+
+# local properties overrides
+*.local
+
+# Build output
+target/
+*.built.js
+
+# intellij
+.idea*
+*.iml
