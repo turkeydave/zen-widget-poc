@@ -29,7 +29,7 @@
   transform: rotateY(180deg);
   box-sizing: border-box;
   padding: 10px;
-  color: white;
+  color: black;
   text-align: center;
   background-color: #aaa;
 }
@@ -45,5 +45,9 @@
 background: url(images/gear2.png);
 background-size: 25px 25px;
 background-repeat: no-repeat;
+}
+.admin{
+background-color: yellow;
+display: none;
 }
 ;
