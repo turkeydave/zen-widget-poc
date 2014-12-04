@@ -1,6 +1,64 @@
-<div class="cleanslate">
+
+    {{# wod }}
+        <div class="wod-container">
+            <h1>WOD: {{ name }}</h1>
+            <div class="wod-display">
+            {{# activities.length}} <!-- only show when there are one or more items -->
+                {{# activities:i}}
+                    <div class="wod-item">
+                        <div class="wod-thing wod-img top-spacer">{{ imgClass }}</div>
+                        <div class="wod-thing wod-desc top-spacer">{{ desc }}</div>
+                        <div class="wod-thing wod-number-holder"><span class="wod-label">count&nbsp;</span><span class="wod-number">{{ count }}</span></div>
+                        <div class="wod-thing wod-number-holder"><span class="wod-label">sets&nbsp;</span><span class="wod-number">{{ sets }}</span></div>
+                    </div>
+                    <div style="clear:both;"></div>
+                {{/ activities}}
+            {{/ activities.length}}
+            </div>
+
+        </div>
+    {{/ wod }}
   <button on-click="openPopup">Test Modal</button>
-  <div class="mw-wrapper">
-    <a href="#" on-click="mwClick">{{ cnt }} clicks!</a> last click: {{ ts }}
-  </div>
+
+<div id="divAdmin">
+    <h3>Administer WOD</h3>
+    {{# wod }}
+        <div>WOD Name: <input placeholder='wod name' value='{{ wod.name }}'></div>
+        {{# wod.activities:i}}
+            <table>
+                <tr>
+                    <td style="width: 75px;">{{ imgClass}}</td>
+                    <td style="width: 75px;">{{ desc }}</td>
+                    <td style="width: 75px;">{{ count }}</td>
+                    <td style="width: 75px;">{{ sets }}</td>
+                    <td style="width: 75px;"><button on-click='remove:{{i}}' class='destroy'>remove</button></td>
+                </tr>
+            </table>
+        {{/ activities}}
+    {{/ wod }}
+
+    <fieldset style="margin-top: 25px;">
+        <legend>New Activity</legend>
+        <table>
+            <tr>
+                <td>Image / Cat</td><td>
+                    <select value='{{newImg}}'>
+                        <option selected disabled>Select a category</option>
+                        {{#categories}}
+                        <option value='{{name}}'>{{name}}</option>
+                        {{/categories}}
+                    </select>
+                </td>
+                <td style="padding-left:20px">Desc</td><td><input placeholder='description' value='{{ newDesc }}'></td>
+            </tr>
+            <tr>
+                <td style="padding-left:20px">Count</td><td><input placeholder='wod name' value='{{ newCount }}'></td>
+                <td style="padding-left:20px">Sets</td><td><input placeholder='wod name' value='{{ newSets }}'></td>
+            </tr>
+            <tr>
+                <td colspan="2"><button on-click='add'>Add New Activity</button></td>
+            </tr>
+        </table>
+    </fieldset>
+
 </div>

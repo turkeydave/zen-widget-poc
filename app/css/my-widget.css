@@ -1,13 +1,69 @@
-@import cleanslate.css;
+/* @import cleanslate.css; */
 
-#myWidget .mw-wrapper {
-	width: 220px !important;
-	color: #eee !important;
-	background: #333 !important;
-	border: 1px solid #444 !important;
-	padding: 5px !important;
-	border-radius: 5px !important;
+.wod-container{
+    width: 90%;
+    margin:auto;
 }
+.wod-display{
+    width: 100%;
+    position:relative;
+}
+.wod-item{
+    width: 100%;
+    height: 50px;
+    background-color: #FFFFFF;
+    position:relative;
+}
+.wod-item:hover{
+    background-color: #E8E8E8;
+}
+.top-spacer{ margin-top: 10px;}
+
+.wod-thing{ float:left; margin-right: 25px; height: 40px;}
+
+.wod-img{ width: 100px }
+.wod-desc{ width: 200px; font-weight: bold; }
+.wod-number-holder{ font-size: 24pt;}
+.wod-label{ font-size: 14pt;}
+.wod-number{ font-size: 24pt;}
+
+@media only screen and (max-width : 1024px) {
+    .wod-img{ width: auto;}
+    .wod-desc{ width: auto; font-weight: bold; }
+    .wod-thing{ float: none; clear:both; height: auto;}
+    .wod-item{
+        margin-bottom: 25px;
+        margin-left: 0;
+        margin-right: 0;
+        margin-top: 10px;
+    }
+    .wod-item{
+        width: 200px;
+        height: auto;
+        text-align: center;
+    }
+    .wod-item:hover{background-color: #FFFFFF;}
+    .top-spacer{ margin-top: 5px;}
+}
+
+
+@media only screen and (max-device-width : 1024px){
+
+}
+/*@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px)
+and (orientation : portrait) {  }
+*/
+
+/*#myWidget .mw-wrapper {*/
+	/*width: 220px !important;*/
+	/*color: #eee !important;*/
+	/*background: #333 !important;*/
+	/*border: 1px solid #444 !important;*/
+	/*padding: 5px !important;*/
+	/*border-radius: 5px !important;*/
+/*}*/
 
 .modal-background {
     position: fixed;
@@ -34,6 +90,7 @@
     max-width: 100%;
     max-height: 100%;
     overflow-y: auto;
+    border-radius: 5px !important;
     -moz-box-sizing: border-box; box-sizing: border-box;
 }
 
