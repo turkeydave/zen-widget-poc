@@ -17,30 +17,30 @@ define(['jquery'], function ($) {
                 console.log('error! ' + resp);
             });
         },
-        getWOD: function(callback){
-            return {
-                name:'Kill Sesh',
-                level: 'hard',
-                activities:[
-                    { imgClass: 'squat', desc:'squats', count: 25, sets: 3},
-                    { imgClass: 'pushup', desc:'pushups', count: 15, sets: 3}
-                ]
-            };
-        },
+//        getWOD: function(callback){
+//            return {
+//                name:'Killer Sesh',
+//                level: 'hard',
+//                activities:[
+//                    { imgClass: 'squat', desc:'do squats until you puke', count: 25, sets: 3},
+//                    { imgClass: 'dance', desc:'dance if youre happy', count: 15, sets: 3}
+//                ]
+//            };
+//        },
         addItem: function(itema){
             if(this.wod){
                 wod.activities.push(item);
             }
         },
         defaults: {
-            name:'Kill Sesh',
-            level: 'hard',
-            activities:[
-                { imgClass: 'squat', desc:'squats', count: 25, sets: 3},
-                { imgClass: 'pushup', desc:'pushups', count: 15, sets: 3}
-            ]
-        },
-        categories: [{name: 'squat'}, {name: 'pushup'}, {name: 'plank'}]
+                name:'Killer Sesh',
+                level: 'hard',
+                activities:[
+                    { imgClass: 'squat', desc:'do squats until you puke', count: 25, sets: 3},
+                    { imgClass: 'dance', desc:'dance if youre happy', count: 15, sets: 3}
+                ]
+            },
+        categories: [{name: 'dancing'}, {name: 'plank'}, {name: 'deadlift'}, {name: 'squat'}]
     };
 
     return dataService;

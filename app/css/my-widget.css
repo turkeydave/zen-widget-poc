@@ -23,47 +23,90 @@
 
 .wod-img{ width: 100px }
 .wod-desc{ width: 200px; font-weight: bold; }
-.wod-number-holder{ font-size: 24pt;}
+.wod-number-holder{ }
 .wod-label{ font-size: 14pt;}
 .wod-number{ font-size: 24pt;}
+
+
+.dance {
+    background: url(http://0.0.0.0:9000/images/dancing.png) no-repeat center center;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+    background-size: contain;
+}
+.plank {
+    background: url(http://0.0.0.0:9000/images/person26.png) no-repeat center center;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+    background-size: contain;
+}
+.deadlift {
+    background: url(http://0.0.0.0:9000/images/standing83.png) no-repeat center center;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+    background-size: contain;
+}
+.squat {
+    background: url(http://0.0.0.0:9000/images/weightlift.png) no-repeat center center;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+    background-size: contain;
+}
+
 
 @media only screen and (max-width : 1024px) {
     .wod-img{ width: auto;}
     .wod-desc{ width: auto; font-weight: bold; }
-    .wod-thing{ float: none; clear:both; height: auto;}
+    .wod-thing{ float: none; clear:both;}
+    .wod-number{ font-size: 18pt;}
     .wod-item{
         margin-bottom: 25px;
         margin-left: 0;
         margin-right: 0;
         margin-top: 10px;
-    }
-    .wod-item{
+
         width: 200px;
         height: auto;
         text-align: center;
     }
     .wod-item:hover{background-color: #FFFFFF;}
     .top-spacer{ margin-top: 5px;}
+
+    .dance {
+        background: url(http://0.0.0.0:9000/images/dancingbig.png) no-repeat center center;
+        -webkit-background-size: contain;
+        -moz-background-size: contain;
+        -o-background-size: contain;
+        background-size: contain;
+    }
+    .plank {
+        background: url(http://0.0.0.0:9000/images/person26big.png) no-repeat center center;
+        -webkit-background-size: contain;
+        -moz-background-size: contain;
+        -o-background-size: contain;
+        background-size: contain;
+    }
+    .deadlift {
+        background: url(http://0.0.0.0:9000/images/standing83big.png) no-repeat center center;
+        -webkit-background-size: contain;
+        -moz-background-size: contain;
+        -o-background-size: contain;
+        background-size: contain;
+    }
+    .squat {
+        background: url(http://0.0.0.0:9000/images/weightliftbig.png) no-repeat center center;
+        -webkit-background-size: contain;
+        -moz-background-size: contain;
+        -o-background-size: contain;
+        background-size: contain;
+    }
 }
 
 
-@media only screen and (max-device-width : 1024px){
-
-}
-/*@media only screen
-and (min-device-width : 768px)
-and (max-device-width : 1024px)
-and (orientation : portrait) {  }
-*/
-
-/*#myWidget .mw-wrapper {*/
-	/*width: 220px !important;*/
-	/*color: #eee !important;*/
-	/*background: #333 !important;*/
-	/*border: 1px solid #444 !important;*/
-	/*padding: 5px !important;*/
-	/*border-radius: 5px !important;*/
-/*}*/
 
 .modal-background {
     position: fixed;
