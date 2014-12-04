@@ -34,11 +34,11 @@
 <script type="text/javascript">
 $( "#gear" ).click(function() {
   $('#f1_card').toggleClass('back face center','front face');
-  $('#admin').slideDown('slow');
   $('#back').fadeTo('slow', 0.33);
+  $('#admin').delay(900).slideDown('slow');
 });
 $( "#submit" ).click(function() {
-  $('#admin').slideup('slow');
+	$('#admin').slideUp('slow');
    $('#back').fadeTo('slow', 1);
 });
 </script>
