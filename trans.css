@@ -55,7 +55,8 @@ display: none;
    background-repeat: no-repeat;
    width: 64px;
    height: 64px;
-   border: 1px solid; 
+   border: 1px solid;
+   float: left; 
 }
 .image2 {
    background: url(images/person26.png);
@@ -63,6 +64,7 @@ display: none;
    width: 64px;
    height: 64px;
    border: 1px solid;
+   float: left; 
    
 }
 .image3 {
@@ -70,7 +72,8 @@ display: none;
    background-repeat: no-repeat;
    width: 64px;
    height: 64px;
-   border: 1px solid; 
+   border: 1px solid;
+   float: left;  
 }
 .image4 {
    background: url(images/weightlift.png);
@@ -78,6 +81,7 @@ display: none;
    width: 64px;
    height: 64px;
    border: 1px solid; 
+   float: left; 
 }
 .image5 {
    background: url(images/dancing.png);
@@ -85,39 +89,45 @@ display: none;
    width: 64px;
    height: 64px;
    border: 1px solid;
+   float: left; 
 
 }
 
-@media (max-width: 600px) {
+@media (max-width: 1000px) {
    .image1 {
     background: url(images/scale1s.png);
-    width: 16px;
-    height: 16px;
+    width: 32px;
+    height: 32px;
     background-color: green;
+    float: none;
   }
   .image2 {
     background: url(images/person26s.png);
-    width: 16px;
-    height: 16px;
+    width: 32px;
+    height: 32px;
     background-color: green;
+    float: none;
   }
   .image3 {
     background: url(images/standing83s.png);
-    width: 16px;
-    height: 16px;
+    width: 32px;
+    height: 32px;
     background-color: green;
+    float: none;
   }
   .image4 {
     background: url(images/weightlifts.png);
-    width: 16px;
-    height: 16px;
+    width: 32px;
+    height: 32px;
     background-color: green;
+    float: none;
   }
   .image5 {
     background: url(images/dancings.png);
-    width: 16px;
-    height: 16px;
+    width: 32px;
+    height: 32px;
     background-color: green;
+    float: none;
   }
 
   }
