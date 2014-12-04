@@ -50,4 +50,75 @@ background-repeat: no-repeat;
 background-color: yellow;
 display: none;
 }
+.image1 {
+   background: url(images/scale1.png);
+   background-repeat: no-repeat;
+   width: 64px;
+   height: 64px;
+   border: 1px solid; 
+}
+.image2 {
+   background: url(images/person26.png);
+   background-repeat: no-repeat;
+   width: 64px;
+   height: 64px;
+   border: 1px solid;
+   
+}
+.image3 {
+   background: url(images/standing83.png);
+   background-repeat: no-repeat;
+   width: 64px;
+   height: 64px;
+   border: 1px solid; 
+}
+.image4 {
+   background: url(images/weightlift.png);
+   background-repeat: no-repeat;
+   width: 64px;
+   height: 64px;
+   border: 1px solid; 
+}
+.image5 {
+   background: url(images/dancing.png);
+   background-repeat: no-repeat;
+   width: 64px;
+   height: 64px;
+   border: 1px solid;
+
+}
+
+@media (max-width: 600px) {
+   .image1 {
+    background: url(images/scale1s.png);
+    width: 16px;
+    height: 16px;
+    background-color: green;
+  }
+  .image2 {
+    background: url(images/person26s.png);
+    width: 16px;
+    height: 16px;
+    background-color: green;
+  }
+  .image3 {
+    background: url(images/standing83s.png);
+    width: 16px;
+    height: 16px;
+    background-color: green;
+  }
+  .image4 {
+    background: url(images/weightlifts.png);
+    width: 16px;
+    height: 16px;
+    background-color: green;
+  }
+  .image5 {
+    background: url(images/dancings.png);
+    width: 16px;
+    height: 16px;
+    background-color: green;
+  }
+
+  }
 ;
