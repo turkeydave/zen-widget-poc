@@ -5,8 +5,8 @@
             <div class="wod-display">
             {{# activities.length}} <!-- only show when there are one or more items -->
                 {{# activities:i}}
-                    <div class="wod-item">
-                        <div class="wod-thing wod-img top-spacer">{{ imgClass }}</div>
+                    <div class="wod-item" style="border-bottom: 1pt solid silver">
+                        <div class="wod-thing wod-img top-spacer {{imgClass}}"></div>
                         <div class="wod-thing wod-desc top-spacer">{{ desc }}</div>
                         <div class="wod-thing wod-number-holder"><span class="wod-label">count&nbsp;</span><span class="wod-number">{{ count }}</span></div>
                         <div class="wod-thing wod-number-holder"><span class="wod-label">sets&nbsp;</span><span class="wod-number">{{ sets }}</span></div>
