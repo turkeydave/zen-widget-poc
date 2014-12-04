@@ -1,38 +1,61 @@
+<!DOCTYPE HTML>
 <html>
-<head></head>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Embedded widget test</title>
+</head>
 <body>
-<!-- from facebook -->
- <script>
-      window.fbAsyncInit = function() {
-        FB.init({
-          appId      : 'your-app-id',
-          xfbml      : true,
-          version    : 'v2.1'
-        });
-      };
-
-      (function(d, s, id){
-         var js, fjs = d.getElementsByTagName(s)[0];
-         if (d.getElementById(id)) {return;}
-         js = d.createElement(s); js.id = id;
-         js.src = "//connect.facebook.net/en_US/sdk.js";
-         fjs.parentNode.insertBefore(js, fjs);
-       }(document, 'script', 'facebook-jssdk'));
-    </script>
-	
-<!-- from errexception -->
+<h1>Embedded widget test</h1>
+<div id="myWidget"></div>
 <script>
-    // <snip>
     (function (window, document) {
         var loader = function () {
             var script = document.createElement("script"), tag = document.getElementsByTagName("script")[0];
-            script.src = "http://errorception.com/projects/" + _errs[0] + "/beacon.js";
+            script.src = "embed.min.js";
             tag.parentNode.insertBefore(script, tag);
         };
-
-        // Wait until window.onload before downloading any more code.
         window.addEventListener ? window.addEventListener("load", loader, false) : window.attachEvent("onload", loader);
     })(window, document);
 </script>
 </body>
 </html>
+
+
+<!--<html>-->
+<!--<head></head>-->
+<!--<body>-->
+<!--&lt;!&ndash; from facebook &ndash;&gt;-->
+ <!--<script>-->
+      <!--window.fbAsyncInit = function() {-->
+        <!--FB.init({-->
+          <!--appId      : 'your-app-id',-->
+          <!--xfbml      : true,-->
+          <!--version    : 'v2.1'-->
+        <!--});-->
+      <!--};-->
+
+      <!--(function(d, s, id){-->
+         <!--var js, fjs = d.getElementsByTagName(s)[0];-->
+         <!--if (d.getElementById(id)) {return;}-->
+         <!--js = d.createElement(s); js.id = id;-->
+         <!--js.src = "//connect.facebook.net/en_US/sdk.js";-->
+         <!--fjs.parentNode.insertBefore(js, fjs);-->
+       <!--}(document, 'script', 'facebook-jssdk'));-->
+    <!--</script>-->
+	<!---->
+<!--&lt;!&ndash; from errexception &ndash;&gt;-->
+<!--<script>-->
+    <!--// <snip>-->
+    <!--(function (window, document) {-->
+        <!--var loader = function () {-->
+            <!--var script = document.createElement("script"), tag = document.getElementsByTagName("script")[0];-->
+            <!--script.src = "http://errorception.com/projects/" + _errs[0] + "/beacon.js";-->
+            <!--tag.parentNode.insertBefore(script, tag);-->
+        <!--};-->
+
+        <!--// Wait until window.onload before downloading any more code.-->
+        <!--window.addEventListener ? window.addEventListener("load", loader, false) : window.attachEvent("onload", loader);-->
+    <!--})(window, document);-->
+<!--</script>-->
+<!--</body>-->
+<!--</html>-->

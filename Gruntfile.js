@@ -2,35 +2,6 @@ module.exports = function (grunt) {
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
 
-        bower: {
-            install: {
-                options: {
-                    install: true,
-                    copy: false,
-                    targetDir: './client-libs',
-                    cleanTargetDir: true
-                }
-            }
-        },
-
-        jshint: {
-            all: [ 'Gruntfile.js', 'app/*.js', 'app/**/*.js',
-                    '!app/dist/*.js',
-                    '!app/tmp/*.js']
-        },
-        karma: {
-            options: {
-                configFile: 'karma.conf.js'
-            },
-            unit: {
-                singleRun: true
-            },
-
-            continuous: {
-                singleRun: false,
-                autoWatch: true
-            }
-        },
         html2js: {
             dist: {
                 src: [ 'app/layout/*.html', 'app/legacyIframe/*.html', 'app/login/*.html', 'app/setup/*.html' ],
@@ -97,8 +68,11 @@ module.exports = function (grunt) {
         connect: {
             server: {
                 options: {
-                    hostname: 'localhost',
-                    port: 8080
+                    keepalive: true,
+                    port: 9000,
+                    base: {
+                        path: '.'
+                    }
                 }
             }
         },
@@ -149,39 +123,35 @@ module.exports = function (grunt) {
 //        }
     });
 
-    grunt.loadNpmTasks('grunt-contrib-jshint');
+    //grunt.loadNpmTasks('grunt-contrib-jshint');
     grunt.loadNpmTasks('grunt-contrib-clean');
     grunt.loadNpmTasks('grunt-contrib-connect');
     grunt.loadNpmTasks('grunt-contrib-compress');
     grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-contrib-uglify');
-    grunt.loadNpmTasks('grunt-html2js');
-    grunt.loadNpmTasks('grunt-contrib-watch');
-    grunt.loadNpmTasks('grunt-bower-task');
-    grunt.loadNpmTasks('grunt-karma');
-    grunt.loadNpmTasks('grunt-contrib-less');
+    //grunt.loadNpmTasks('grunt-html2js');
+    //grunt.loadNpmTasks('grunt-contrib-watch');
+    //grunt.loadNpmTasks('grunt-bower-task');
+    //grunt.loadNpmTasks('grunt-karma');
+    //grunt.loadNpmTasks('grunt-contrib-less');
     grunt.loadNpmTasks('grunt-targethtml');
 
+
+    //var connect = require('connect');
+    grunt.registerTask('start-server', ['connect:server']);
+//    grunt.registerTask('start-server', 'Start a custom static web server.', function() {
+//        grunt.log.writeln('Starting static web server in "/" on port 9001.');
+//        connect(connect.static('.')).listen(9001);
+//    });
     //grunt.registerTask('default', ['less']);
     //grunt.registerTask('testMe', ['jshint']);
-    grunt.registerTask('testBower', ['bower']);
-    grunt.registerTask('testMe', ['clean', 'html2js:dist', 'concat:dist', 'targethtml:dist']); //, 'uglify:dist']);
-
-    grunt.registerTask('dev', [ 'bower', 'connect:server', 'watch:dev' ]);
-    grunt.registerTask('test', [ 'bower', 'jshint', 'karma:continuous' ]);
-    grunt.registerTask('minified', [ 'bower', 'connect:server', 'watch:min' ]);
-    grunt.registerTask('package', [ 'bower', 'jshint', 'karma:unit', 'html2js:dist', 'concat:dist', 'uglify:dist',
-        'clean:temp', 'compress:dist' ]);
+//    grunt.registerTask('testBower', ['bower']);
+//    grunt.registerTask('testMe', ['clean', 'html2js:dist', 'concat:dist', 'targethtml:dist']); //, 'uglify:dist']);
+//
+//    grunt.registerTask('dev', [ 'bower', 'connect:server', 'watch:dev' ]);
+//    grunt.registerTask('test', [ 'bower', 'jshint', 'karma:continuous' ]);
+//    grunt.registerTask('minified', [ 'bower', 'connect:server', 'watch:min' ]);
+//    grunt.registerTask('package', [ 'bower', 'jshint', 'karma:unit', 'html2js:dist', 'concat:dist', 'uglify:dist',
+//        'clean:temp', 'compress:dist' ]);
 
 };
-//
-//'app/config/*.js',
-//    'app/directives/*.js',
-//    'app/layout/*.js',
-//    'app/layout/*.js',
-//    'app/legacyIframe/*.js',
-//    'app/login/*.js',
-//    'app/model/*.js',
-//    'app/services/*.js',
-//    'app/setup/*.js',
-//    'app/tmp/*.js'
